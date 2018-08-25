@@ -1,0 +1,37 @@
+{
+  "name": "pixitest",
+  "version": "1.0.0",
+  "description": "",
+  "author": "K0rdan",
+  "license": "ISC",
+  "repository": {
+    "url": "https://github.com/K0rdan/PixiTest.git"
+  },
+  "main": "./src/index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "@material-ui/core": "^1.4.0",
+    "@material-ui/icons": "^1.1.0",
+    "apollo-boost": "^0.1.10",
+    "apollo-link-state": "^0.4.1",
+    "graphql": "^0.13.2",
+    "pixi.js": "^4.8.1",
+    "prop-types": "^15.6.2",
+    "react": "^16.4.1",
+    "react-apollo": "^2.1.9",
+    "react-devtools": "^3.2.3",
+    "react-dom": "^16.4.1",
+    "react-scripts": "1.1.4"
+  },
+  "devDependencies": {
+    "eslint": "^5.1.0",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "prettier": "^1.13.7"
+  }
+}

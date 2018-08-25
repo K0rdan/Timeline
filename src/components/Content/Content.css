@@ -1,0 +1,12 @@
+.ContentWrapper {
+  margin-top: 56px;
+  transition-property: margin-left;
+  transition-timing-function: ease-out;
+  background-color: #666666;
+}
+
+@media (min-width: 600px) {
+  .ContentWrapper {
+    margin-top: 64px;
+  }
+}
