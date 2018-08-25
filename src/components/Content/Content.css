@@ -1,5 +1,6 @@
 .ContentWrapper {
   margin-top: 56px;
+  padding: 10px;
   transition-property: margin-left;
   transition-timing-function: ease-out;
   background-color: #666666;

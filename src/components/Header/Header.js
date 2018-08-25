@@ -1,57 +1,41 @@
 import React from 'react';
+import { compose } from 'react-apollo';
 import PropTypes from 'prop-types';
-import { Mutation } from 'react-apollo';
-import gql from 'graphql-tag';
 import { AppBar, Toolbar, IconButton, Typography } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
+import {
+  queries as DrawerQueries,
+  mutations as DrawerMutations,
+} from 'gql/Drawer/index';
+import { queries as ProjectQueries } from 'gql/Project/index';
+import withStyle from 'components/Header/withStyle';
 
-import 'components/Header/Header.css';
-
-const TOGGLE_DRAWER = gql`
-  mutation toggleDrawer {
-    drawer {
-      open
-      width
-    }
-  }
-`;
-
-const calculateAppBarStyles = ({ width, open }) => ({
-  width: `calc(100% - ${width}px)`,
-  transitionDuration: `${open ? 225 : 0}ms`,
-});
-
-export const Header = ({ drawer }) => {
-  const { drawerState } = drawer;
-  const appBarStyles = calculateAppBarStyles(drawerState);
-
+const Header = ({ classes, toggleDrawer, projectData }) => {
+  const { project } = projectData;
   return (
-    <AppBar className="AppBarWrapper" style={appBarStyles}>
-      <Toolbar className="ToolbarWrapper">
-        <Mutation mutation={TOGGLE_DRAWER}>
-          {test => {
-            console.log('TEST', test);
-            return (
-              <IconButton onClick={test}>
-                <MenuIcon />
-              </IconButton>
-            );
-          }}
-        </Mutation>
-        <Typography variant="title">TEST</Typography>
+    <AppBar classes={classes}>
+      <Toolbar>
+        <IconButton onClick={toggleDrawer}>
+          <MenuIcon />
+        </IconButton>
+        <Typography variant="title">
+          {project.isOpen ? project.name : 'Welcome in Online RPG Editor !'}
+        </Typography>
       </Toolbar>
     </AppBar>
   );
 };
 
 Header.propTypes = {
-  drawer: PropTypes.shape({
-    drawerState: PropTypes.shape({
-      open: PropTypes.bool.isRequired,
-      width: PropTypes.number.isRequired,
-    }),
-    toggleDrawer: PropTypes.func.isRequired,
-  }),
+  classes: PropTypes.object.isRequired,
+  drawerData: PropTypes.object,
+  toggleDrawer: PropTypes.func,
+  projectData: PropTypes.object,
 };
 
-export default Header;
+export default compose(
+  DrawerQueries.withDrawerQuery,
+  DrawerMutations.withToggleDrawerMutation,
+  ProjectQueries.withProjectQuery,
+  withStyle,
+)(Header);

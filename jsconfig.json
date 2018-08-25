@@ -6,7 +6,8 @@
     "paths": {
       "*": ["*"],
       "components/*": ["./src/components/*"],
-      "gql/*": ["./src/gql/*"]
+      "gql/*": ["./src/gql/*"],
+      "utils/*": ["./src/utils/*"]
     }
   },
   "exclude": ["node_modules", "public"]

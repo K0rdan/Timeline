@@ -4,15 +4,15 @@ import { ApolloProvider } from 'react-apollo';
 import { ApolloClient, InMemoryCache, ApolloLink } from 'apollo-boost';
 import { withClientState } from 'apollo-link-state';
 
-import { Defaults, Resolvers } from 'gql/index';
+import { defaults, resolvers } from 'gql/index';
 import { App } from 'components/index';
 
 const cache = new InMemoryCache();
 
 const stateLink = withClientState({
   cache,
-  defaults: Defaults,
-  resolvers: Resolvers,
+  defaults,
+  resolvers,
 });
 
 const link = ApolloLink.from([stateLink]);

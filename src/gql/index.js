@@ -1,12 +1,20 @@
-import Resolvers from 'gql/resolvers/index';
-import Defaults from 'gql/defaults/index';
+import { merge } from 'lodash';
+import Global from 'gql/Global';
+import Drawer from 'gql/Drawer';
+import Project from 'gql/Project';
 
-export * from 'gql/resolvers/index';
-export * from 'gql/defaults/index';
+export const defaults = merge(
+  Global.defaults,
+  Drawer.defaults,
+  Project.defaults,
+);
+export const resolvers = {
+  Mutation: merge(Global.resolvers, Drawer.resolvers, Project.resolvers),
+};
 
 export const gql = {
-  Resolvers,
-  Defaults,
+  resolvers,
+  defaults,
 };
 
 export default gql;
