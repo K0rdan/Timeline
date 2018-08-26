@@ -1,3 +1,8 @@
-.SectionTitle {
-  margin: 8px 16px !important;
+.ListItemIcon {
+  margin-right: 0 !important;
+}
+.ListItemText {
+  margin: 0;
+}
+.ListItemFavIcon {
 }
