@@ -2,7 +2,7 @@ export const defaults = {
   user: {
     name: '',
     authenticated: false,
-    favThemes: [],
+    favThemes: [1],
     __typename: 'User',
   },
 };
