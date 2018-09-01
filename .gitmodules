@@ -1,3 +1,0 @@
-[submodule "back/graphql"]
-	path = back/graphql
-	url = https://github.com/K0rdan/Timeline-GraphQL.git
