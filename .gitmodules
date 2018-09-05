@@ -1,6 +1,0 @@
-[submodule "back"]
-	path = back
-	url = https://github.com/K0rdan/Timeline-Back.git
-[submodule "front"]
-	path = front
-	url = https://github.com/K0rdan/Timeline-Front.git
