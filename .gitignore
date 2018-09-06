@@ -1,5 +1,3 @@
 node_modules/
-lerna-debug.log
-front
-back
-back/graphql
+front/
+back/
