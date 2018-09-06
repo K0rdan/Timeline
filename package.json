@@ -12,7 +12,6 @@
   },
   "homepage": "https://github.com/K0rdan/Timeline#readme",
   "devDependencies": {
-    "lerna": "^3.3.0",
     "meta": "^1.0.62"
   }
 }
