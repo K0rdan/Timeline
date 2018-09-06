@@ -1,0 +1,12 @@
+{
+  "name": "timeline-back",
+  "author": "Kordan",
+  "license": "ISC",
+  "version": "0.0.2",
+  "description": "Timeline-Back",
+  "scripts": {
+    "docker-clean": "sh ./scripts/docker/clean.sh",
+    "docker-run": "yarn docker-clean && docker-compose up -d",
+    "docker-dev": "yarn docker-clean && docker-compose -f docker-compose.dev.yml up -d"
+  }
+}
