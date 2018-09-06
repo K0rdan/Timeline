@@ -1,6 +1,7 @@
 {
   "projects": {
     "front": "https://github.com/K0rdan/Timeline-Front.git",
-    "back": "https://github.com/K0rdan/Timeline-Back.git"
+    "back": "https://github.com/K0rdan/Timeline-Back.git",
+    "back/graphql": "https://github.com/K0rdan/Timeline-GraphQL.git"
   }
 }
