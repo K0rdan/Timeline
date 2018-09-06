@@ -1,0 +1,17 @@
+{
+  "name": "timeline",
+  "version": "0.0.1",
+  "author": "K0rdan",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/K0rdan/Timeline.git"
+  },
+  "bugs": {
+    "url": "https://github.com/K0rdan/Timeline/issues"
+  },
+  "homepage": "https://github.com/K0rdan/Timeline#readme",
+  "devDependencies": {
+    "lerna": "^3.3.0"
+  }
+}
