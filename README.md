@@ -13,4 +13,5 @@
 ### 2) Structure
 - Back ([Timeline-Back](https://github.com/K0rdan/Timeline-Back))
   - GraphQL ([Timeline-GraphQL](https://github.com/K0rdan/Timeline-GraphQL))
+  - Prisma ([Timeline-Prisma](https://github.com/K0rdan/Timeline-Prisma))
 - Front ([Timeline-Front](https://github.com/K0rdan/Timeline-Front)) 
